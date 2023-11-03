@@ -61,12 +61,10 @@ void loop() {
   Serial.println(z);
   */
 
-  float roll = atan2(a.acceleration.y , a.acceleration.z) * 180.0 / PI;
+  //float roll = atan2(a.acceleration.y , a.acceleration.z) * 180.0 / PI;
   float pitch = atan2(-a.acceleration.x , sqrt(a.acceleration.y * a.acceleration.y + a.acceleration.z * a.acceleration.z)) * 180.0 / PI; //account for roll already applied
 
-
-  Serial.println(pitch + 7);
-
+  Serial.println(pitch + 3.8);
   Serial.println("");
   delay(500);
 }
